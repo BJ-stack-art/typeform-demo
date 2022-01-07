@@ -4,10 +4,12 @@ import * as Scroll from 'react-scroll';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box'
+import { blueGrey } from '@mui/material/colors';
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import { purple , indigo } from '@mui/material/colors'
 import './App.css'
+import logo from './interaktiv-logo.png'
 import Start from './items/Start'
 import Item1 from './items/Item1'
 import Item2 from './items/Item2'
@@ -15,8 +17,6 @@ import Item3 from './items/Item3'
 import Item4 from './items/Item4'
 import Item5 from './items/Item5'
 import Item6 from './items/Item6'
-import Item7 from './items/Item7'
-import Item8 from './items/Item8'
 import Item9 from './items/Item9'
 
 let scroll = Scroll.animateScroll;
@@ -52,12 +52,16 @@ function App() {
   
   return (
     <div style={{overflowX: "hidden"}}>
+      <Box sx={{background: "#fff" , position: "fixed" , height: 60 , top: 50, left: 50 , padding: "12px 40px" , borderRadius: 5 , boxShadow: "2px 2px 12px " + blueGrey[400], }}>
+        <img style={{height: "100%"}} src={logo} alt="interaktiv logo" />
+      </Box>
+    
       <Box sx={{position: "fixed" , bottom:30, right:30}}>
         <ButtonGroup variant="contained" sx={{backgroundColor: "#fff"}}>
           <Button disabled={count === 1} onClick={pageUp}>
             <KeyboardArrowUpOutlinedIcon />
           </Button>
-          <Button disabled={count >= 9} onClick={pageDown}>
+          <Button disabled={count >=items} onClick={pageDown}>
             <KeyboardArrowDownOutlinedIcon />
           </Button>
         </ButtonGroup>
@@ -88,12 +92,6 @@ function App() {
         </Item>
         <Item color={indigo[300]}>
           <Item6 pageDown={pageDown} />
-        </Item>
-        <Item color={purple[300]}>
-          <Item7 pageDown={pageDown} />
-        </Item>
-        <Item color={indigo[300]}>
-          <Item8 pageDown={pageDown} />
         </Item>
         <Item color={purple[300]}>
           <Item9 pageDown={pageDown} />

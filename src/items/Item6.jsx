@@ -12,10 +12,7 @@ registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 const Item6 = ({pageDown}) => {
   return (
     <div>
-      <Typography variant="h5" sx={{marginBottom: 1}}>Please upload the social media screenshots where you mention Myriad.Social to this page!</Typography>
-      <Box>
-        <Typography variant='body'>If you have multiple files, you can upload a zipped folder.</Typography>
-      </Box>
+      <Typography variant="h5" sx={{marginBottom: 1}}>Upload your NRIC document</Typography>
       <Box sx={{marginTop: 2}}>
         <FilePond
           allowMultiple={false}
