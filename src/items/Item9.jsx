@@ -1,7 +1,7 @@
 import React from 'react'
-import { InputBase  ,Typography , Box , Button } from '@mui/material'
+import {Typography , Box , Button } from '@mui/material'
 
-const Item9 = ({pageDown}) => {
+const Item9 = () => {
   return (
     <div>
       <Typography variant="h5" sx={{marginBottom: 1}}>Thank you for filling in the form!</Typography>

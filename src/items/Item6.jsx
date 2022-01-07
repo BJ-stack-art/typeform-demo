@@ -1,5 +1,5 @@
 import React from 'react'
-import { FilePond, File, registerPlugin } from 'react-filepond'
+import { FilePond, registerPlugin } from 'react-filepond'
 import 'filepond/dist/filepond.min.css'
 import { Stack  ,Typography , Box , Button } from '@mui/material'
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
