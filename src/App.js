@@ -7,7 +7,7 @@ import Box from '@mui/material/Box'
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import { purple , indigo } from '@mui/material/colors'
-import './app.css'
+import './App.css'
 import Start from './items/Start'
 import Item1 from './items/Item1'
 import Item2 from './items/Item2'
