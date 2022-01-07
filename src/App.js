@@ -30,12 +30,10 @@ function App() {
   const [count, setCount] = useState(1)
 
   const pageUp = () => {
-    scroll.scrollMore(scaleScroll * -1)
     if(count > 1) setCount(count-1)
   }
   
   const pageDown = () => {
-    scroll.scrollMore(scaleScroll)
     if(count <= items) setCount(count+1)
   }
 
@@ -44,8 +42,12 @@ function App() {
     setScaleScroll(container.current.firstElementChild.scrollHeight)
   }, [])
 
+
   useEffect(() => {
     scroll.scrollTo((count-1) * scaleScroll)
+    window.addEventListener('keyup' , (e) => {
+      if(e.keyCode === 13 && count <= items) setCount(count+1) 
+    })
   }, [count])
   
   return (

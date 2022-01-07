@@ -1,5 +1,6 @@
 import React from 'react'
-import { InputBase  ,Typography , Box , Button } from '@mui/material'
+import { Stack  ,Typography , Box , Button } from '@mui/material'
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 
 const Item6 = ({pageDown}) => {
   return (
@@ -8,9 +9,10 @@ const Item6 = ({pageDown}) => {
       <Box>
         <Typography variant='body'>If you have multiple files, you can upload a zipped folder.</Typography>
       </Box>
-      <Box>
-        <Button sx={{marginTop: 2}} onClick={pageDown} variant="contained">OK</Button>
-      </Box>
+      <Stack  direction={'row'} alignItems={'center'} spacing={2}>
+        <Button sx={{marginTop: 2}} onClick={pageDown} variant="contained" endIcon={<CheckRoundedIcon />} >OK</Button>
+        <Typography variant="body2" sx={{display: 'block' , paddingTop: 1.5}}>press Enter</Typography>
+      </Stack>
     </div>
   )
 }

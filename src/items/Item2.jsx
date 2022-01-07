@@ -1,5 +1,6 @@
 import React from 'react'
-import { InputBase  ,Typography , Box , Button } from '@mui/material'
+import { InputBase  ,Typography , Box , Stack , Button } from '@mui/material'
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 
 const Item2 = ({pageDown}) => {
   return (
@@ -9,9 +10,10 @@ const Item2 = ({pageDown}) => {
         <Typography variant='body'>If you don't have a username, please create one here.</Typography>
       </Box>
       <InputBase sx={{color: "#fff" , borderBottom: "1px solid #fff" , width: "100%" , marginTop: 1}} placeholder="Type your answer here..."/>
-      <Box>
-        <Button sx={{marginTop: 2}} onClick={pageDown} variant="contained">OK</Button>
-      </Box>
+      <Stack direction={'row'} alignItems={'center'} spacing={2}>
+        <Button sx={{marginTop: 2}} onClick={pageDown} variant="contained" endIcon={<CheckRoundedIcon />}>OK</Button>
+        <Typography variant="body2" sx={{display: 'block' , paddingTop: 1.5}}>press Enter</Typography>
+      </Stack>
     </div>
   )
 }
